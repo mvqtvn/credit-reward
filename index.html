@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -20,28 +20,35 @@
         </button>
     </header>
 
-    <!-- EcoCoins -->
-    <section class="red-banner">
-        <div class="stat">
-            <p class="stat-title">EcoCoins</p>
+    
+    <section class="background">
+        <!--Greeting-->
+        <div class="greet">
+            <h3>Good morning!</h3>
+        </div>
+
+        <!-- EcoCoins -->
+        <section class="red-banner">
+            <div class="stat">
+                <p class="stat-title">EcoCoins</p>
+                    <h1 class="stat-value">
+                        250
+                        <span class="material-icons">paid</span>
+                    </h1>
+            </div>
+
+            <div class="divider"></div>
+            
+            <div class="stat">
+                <p class="stat-title">Plastic cups saved</p>
+
                 <h1 class="stat-value">
-                    250
-                    <span class="material-icons">paid</span>
+                    20
+                    <span class="material-icons">local_drink</span>
                 </h1>
-        </div>
-
-        <div class="divider"></div>
-        
-        <div class="stat">
-            <p class="stat-title">Plastic cups saved</p>
-
-            <h1 class="stat-value">
-                20
-                <span class="material-icons">local_drink</span>
-            </h1>
-        </div>
+            </div>
+        </section>
     </section>
-
 
     <!-- Resources-->
     <section class="ecohub">
@@ -76,7 +83,8 @@
         </div>
         <p><small style="font-style: italic; color: #666;">
             Specially curated by Greenlink NJC  </small></p>
-</section>
+    </section>
+
 <script src="script.js"></script>
 </body>
 
