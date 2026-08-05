@@ -47,7 +47,7 @@ body {
     position: relative;
     background-image: url("njcBG.jpg");
     background-attachment: fixed;
-    background-size: 100% 50%;
+    background-size: 100% 60%;
     background-repeat: no-repeat;
     color: white;
     overflow: hidden;
@@ -182,7 +182,7 @@ body {
     background:#aa071a;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 300px) {
 
     .red-banner {
         flex-direction: column;
