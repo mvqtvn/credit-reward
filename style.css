@@ -4,30 +4,32 @@
     box-sizing:border-box;
 }
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f5f5f5;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f5f5;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 /* Header */
-
-.header{
-    background:white;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:18px 30px;
-    box-shadow:0 2px 10px rgba(0,0,0,.08);
+.header {
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5vw;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+.logo {
+    width: clamp(120px, 25vw, 180px);
+    height: auto;
 }
 .header-left{
     display:flex;
     align-items:center;
     gap:30px;
 }
-.logo{
-    width:180px;
-    height:58px;
-}
+
 
 
 
@@ -47,16 +49,17 @@ body{
 
 /* EcoCoins */
 
-.red-banner{
-    margin:25px;
-    padding:20px;
-    border-radius:25px;
-    background:linear-gradient(80deg,#C8102E,#ff4b60);
-    color:white;
-    display:flex;
-    justify-content:space-evenly;
-    align-items:center;
-    box-shadow:0 8px 18px rgba(200,16,46,.25);
+.red-banner {
+    margin: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 25px;
+    background: linear-gradient(80deg, #C8102E, #ff4b60);
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .stat-title{
@@ -69,7 +72,7 @@ body{
 }
 .stat-value{
     margin-top:10px;
-    font-size:42px;
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
     font-weight:bold;
 }
 .stat-value .material-icons{
@@ -78,9 +81,9 @@ body{
 }
 
 .divider{
-    width:2px;
-    height:90px;
-    background:rgba(255,255,255,0.7);
+    width: 2px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.7);
     border-radius:2px;
 }
 
@@ -88,14 +91,14 @@ body{
 
 /* Resources */
 .ecohub{
-    margin:25px;
+    margin: 1.5rem;
 }
 
 .ecohub h2{
     margin-left: 10px;
     margin-top: 40px;
     font-family: "Segoe UI", sans-serif;
-    font-size: 35px;
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
     font-weight: 700;
     letter-spacing: -1.2px;
     margin-bottom: 18px;
@@ -104,7 +107,7 @@ body{
 .eco-card{
     background:white;
     border-radius:20px;
-    padding:22px;
+    padding: 1.3rem;
     margin-bottom:18px;
     box-shadow:0 4px 12px rgba(0,0,0,0.08);
 }
@@ -145,3 +148,46 @@ body{
     background:#aa071a;
 }
 
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 1rem;
+    }
+    .header-left {
+        gap: 1rem;
+    }
+    .notification-btn .material-icons {
+        font-size: 1.6rem;
+    }
+    .red-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+    .divider {
+        width: 70%;
+        height: 2px;
+    }
+    .ecohub h2 {
+        margin-top: 1rem;
+        margin-left: 0;
+        text-align: center;
+    }
+    .read-more-btn {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .red-banner,
+    .ecohub {
+        margin: 1rem;
+    }
+    .eco-card {
+        padding: 1rem;
+    }
+    .stat-title {
+        font-size: 0.9rem;
+    }
+    .stat-value {
+        font-size: 2rem;
+    }
+}
