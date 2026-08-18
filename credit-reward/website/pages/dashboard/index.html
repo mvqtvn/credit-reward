@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-left">
+            <img src="../../assets/images/njclogo.png" alt="NJC Logo" class="logo">
+        </div>
+
+        <button class="notification-btn" id="notificationBtn">
+            <span class="material-icons">notifications</span>
+        </button>
+        
+        <!-- notification -->
+        <div class="notification-panel" id="notificationPanel">
+            <div class="notification-header">
+                <h3>Notifications</h3>
+                <button class="close-btn" id="closeNotifications">&times;</button>
+            </div>
+            <div class="notification-list" id="notificationList">
+                <!-- Notifications will be populated here -->
+            </div>
+        </div>
+    </header>
+
+    
+    <section class="background">
+        <!--greeting-->
+        <div class="greet">
+            <h3 id="greeting">Good morning!</h3>
+        </div>
+
+        <!-- EcoCoins -->
+        <section class="red-banner">
+            <div class="stat">
+                <p class="stat-title">EcoCoins</p>
+                    <h1 class="stat-value">
+                        250
+                        <span class="material-icons">paid</span>
+                    </h1>
+            </div>
+
+            <div class="divider"></div>
+            
+            <div class="stat">
+                <p class="stat-title">Plastic cups saved</p>
+
+                <h1 class="stat-value">
+                    20
+                    <span class="material-icons">local_drink</span>
+                </h1>
+            </div>
+        </section>
+    </section>
+
+    <!-- resources-->
+    <section class="ecohub">
+
+    <h2>Eco News & Highlights</h2>
+        <div class="eco-card">
+            <h3>Fact of the week 🌳</h3>
+            <p>
+                Bring your own reusable cup to reduce
+                plastic waste and earn EcoCoins!
+            </p>
+        </div>
+
+        <div class="eco-card">
+            <h3>NJC Events 🏫</h3>
+            <p>
+                Recycling Drive<br>
+                15 August 2026
+            </p>
+        </div>
+
+        <div class="eco-card">
+            <h3>Latest News 📰</h3>
+            <p>
+                Singapore expands initiatives to reduce
+                single-use plastics across schools.
+            </p>
+
+            <button class="read-more-btn" id="newsBtn">
+                Read More  
+            </button>
+        </div>
+        
+        <p><small style="font-style: italic; color: #666;">
+            Specially curated by Greenlink NJC 
+        </small></p>
+    </section>
+    <!-- Bottom banner navigation -->
+    
+    <footer class="bottom-banner">
+    <nav class="nav-links">
+        <a href="../dashboard/index.html" class="nav-btn">Dashboard</a>
+        <a href="../rewards/index.html" class="nav-btn">Rewards</a>
+        <a href="../leaderboard/index.html" class="nav-btn">Leaderboard</a>
+        <a href="../settings/index.html" class="nav-btn">Settings</a>
+    </nav>
+    </footer>
+
+<script src="script.js"></script>
+</body>
+
+</html>

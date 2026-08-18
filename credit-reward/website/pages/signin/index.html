@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sign in</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="background-image">
+
+    <header class="header">
+        <img src="../../assets/images/njclogo.png"
+             alt="NJC Logo"
+             class="logo">
+    </header>
+
+    <main class="container">
+        <section class="signin-card">
+            <h1>Welcome back!</h1>
+            <p>Sign in to continue to your rewards dashboard.</p>
+
+            <!-- Sign in button -->
+            <button class="google-btn" id="emailPopupBtn" type="button">
+                <span class="material-icons">login</span>
+                <span>Sign in</span>
+                <img src="../../assets/images/google.png" alt="Google logo" class="google-logo">
+            </button>
+        </section>
+    </main>
+
+    <!-- Email popup modal -->
+    <div id="emailModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h2>Enter your email</h2>
+            <form id="emailForm">
+                <input type="email" id="emailInput" name="email" required />
+                <button type="submit">Continue</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- RFID popup modal -->
+    <div id="rfidModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span id="closeRfidModal" class="close">&times;</span>
+            <h2>Scan or type your RFID</h2>
+            <form id="rfidForm">
+                <input type="text" id="rfidInput" name="rfid" placeholder="Enter RFID UID" required />
+                <button type="submit">Submit RFID</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

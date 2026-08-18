@@ -1,0 +1,350 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f5f5;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Header */
+.header {
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5vw;
+}
+.logo {
+    width: clamp(120px, 30vw, 180px);
+    height: auto;
+    object-fit: cover;
+}
+.header-left{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+
+/* Notification */
+
+.notification-btn{
+    background:none;
+    border:none;
+    cursor:pointer;
+    position: relative;
+}
+.notification-btn .material-icons{
+    font-size: 30px;
+    color:#333;
+}
+
+/* Notification Panel */
+.notification-panel {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    width: 40vw;
+    max-height: 600px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.notification-panel.active {
+    display: flex;
+}
+
+.notification-header {
+    padding: 15px;
+    border-bottom: 2px solid #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notification-header h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #999;
+    padding: 0;
+    width: 28px;
+    height: 28px;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+.notification-list {
+    overflow-y: auto;
+    flex: 1;
+}
+
+.notification-item {
+    padding: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.notification-item:hover {
+    background-color: #f9f9f9;
+}
+
+.notification-item:last-child {
+    border-bottom: none;
+}
+
+.notification-item.earned {
+    border-left: 4px solid #4CAF50;
+}
+
+.notification-item.spent {
+    border-left: 4px solid #FF6B6B;
+}
+
+.notification-type {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.notification-item.earned .notification-type {
+    color: #4CAF50;
+}
+
+.notification-item.spent .notification-type {
+    color: #FF6B6B;
+}
+
+.notification-description {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.notification-amount {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.notification-item.earned .notification-amount {
+    color: #4CAF50;
+}
+
+.notification-item.spent .notification-amount {
+    color: #FF6B6B;
+}
+
+.notification-time {
+    font-size: 12px;
+    color: #999;
+}
+
+.notification-empty {
+    padding: 40px 20px;
+    text-align: center;
+    color: #999;
+}
+
+/* Frontpage */
+.background {
+    position: relative;
+    background-image: url("../../assets/images/njcBG.jpg");
+    background-position: center;    
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    overflow: hidden;
+    min-height: 100px;
+}
+
+.background::before,
+.background::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 80px;
+    pointer-events: none;
+}
+.background::before {
+    top: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), transparent);
+}
+.background::after {
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.2), transparent);
+}
+
+
+/* Greeting */
+.greet{
+    margin-left: clamp(2rem, 2.1vw, 2.2rem);
+    margin-top: clamp(2.3rem, 1.6vw, 2.8rem);
+    color: white;
+    font-family: "Segoe UI", sans-serif;
+    font-size: clamp(2rem, 2.1vw, 2.2rem);
+    font-weight: 700;
+    letter-spacing: -1.2px;
+}
+
+/* EcoCoins */
+
+.red-banner {
+    margin: 1.8rem;;
+    padding: 1.5rem;
+    border-radius: 25px;
+    background: linear-gradient(20deg, #c70021, #ff5669);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+}
+.stat-title{
+    font-size:18px;
+    opacity:0.9;
+}
+.stat {
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+}
+.stat-value {
+    margin-top: 10px;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: bold;
+}
+.stat-value .material-icons{
+    font-size:34px;
+    vertical-align:middle;
+}
+
+.divider{
+    width: 2px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius:2px;
+}
+
+
+
+/* Resources */
+.ecohub{
+    margin: 1.5rem;
+}
+
+.ecohub h2{
+    margin-left: 2vw;
+    margin-top: 10px;
+    font-family: "Segoe UI", sans-serif;
+    font-size: clamp(1.2rem, 1.5rem, 1.8rem);
+    color: #0a0a0a;
+    font-weight: 700;
+    letter-spacing: -1.2px;
+    margin-bottom: 18px;
+}
+
+.eco-card{
+    background:white;
+    border-radius:20px;
+    padding: 1.7rem;
+    margin-bottom:18px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.2);
+}
+
+.eco-card h3{
+    margin-bottom: clamp(1.2vw, 1.4vw, 1.3rem);
+    font-family: "Segoe UI", sans-serif;
+    font-size: clamp(1rem, 1.8vw, 2rem);
+    color:#C8102E;
+}
+.eco-card p{
+    color:#666;
+    font-family: "Segoe UI", sans-serif;
+    font-size: clamp(0.9rem, 1.5vw, 1);
+    line-height:1.5;
+}
+
+.read-more-btn{
+    background:#C8102E;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:12px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:all 0.3s ease;
+    margin-top:15px;
+}
+
+.read-more-btn:hover{
+    background:#A50D24;
+    transform:translateY(-2px);
+    box-shadow:0 6px 15px rgba(0,0,0,0.2);
+}
+
+.read-more-btn:active{
+    transform:scale(0.97);
+}
+
+.read-more-btn:hover{
+    background:#aa071a;
+}
+
+@media screen and (max-width: 370px) {
+    .header {
+        padding: 0.6rem 3vw;
+    }
+    .logo {
+        width: clamp(100px, 20vw, 120px);
+    }
+    .notification-btn .material-icons {
+        font-size: clamp(20px, 1.5vw, 25px);
+    }
+    .header-left {
+        gap: 15px;
+    }
+    .red-banner {
+        flex-direction: column;
+    }
+    .divider {
+        width: 70%;
+        height: 2px;
+    }
+    .red-banner,
+        .ecohub {
+            margin: 1rem;
+        }
+        .eco-card {
+            padding: 1.4rem;
+        }
+        .stat-title {
+            font-size: 1.1rem;
+        }
+        .stat-value {
+            font-size: 2rem;
+        }
+}
