@@ -9,7 +9,7 @@
 <ul>
   <li>Download MySQL & VSCode</li>
   <li>Download the files in this repository</li>
-  <li>In the terminal on the 'server' directory, run '<i>mpn init -y</i>' and then run '<i>npm install express mysq12 cors dotenv</i>i>'</li>
+  <li>In the terminal on the 'server' directory, run '<i>mpn init -y</i>' and then run '<i>npm install express mysq12 cors dotenv'</li>
   <li>run '<i>node server.js</i>' once you're ready to test!</li>
 </ul>
 <br>
