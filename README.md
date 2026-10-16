@@ -1,17 +1,24 @@
-<h3>Initial timeline:</h3>
+<h1>Set up</h1>
 <ol>
-<li>Website: using simulated data in GitHub Pages</li>
-<li>SQL Database (MySQL): setting up tables & functions with simulated data</li>
-<li>Node.js Server: HTTPS API testing</li>
+  <li>
+    Install MySQL Workbench to set up the SQL Server
+    <ul>
+      <li>Run the database.sql script in MySQL WorkBench</li>
+    </ul>
+  </li>
+  <li>
+    JavaScript Server
+    <ul>
+      <li>Initialise Node.js in the backend folder</li>
+      <li>run 'npm init -y' in the terminal of the respective directory (package.json or package-lock.json should appear in the file)</li>
+    </ul>
+  </li>
+  <li>
+    Install required libraries
+    <ul>
+      <li>'npm install express mysql2 cors body-parser'</li>
+    </ul>
+  </li>
 </ol>
-
-<b>For my groupmates testing this and setting it up, here are some things you should take note of:</b>
-<ul>
-  <li>Download MySQL & VSCode</li>
-  <li>Download the files in this repository</li>
-  <li>In the terminal on the 'server' directory, run '<i>mpn init -y</i>' and then run '<i>npm install express mysq12 cors dotenv'</li>
-  <li>run '<i>node server.js</i>' once you're ready to test!</li>
-</ul>
-<br>
-Check out the test files as well to check if the server is running properly!<br>
-For additional testing, install the '<i>REST Client</i>' extension in VSCode to simulate a POST request.
+<h1>Running the server</h1>
+Run 'npm start' in the directory containing server.js. Leave the terminal open or minimised to run the system. 
