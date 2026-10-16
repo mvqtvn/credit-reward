@@ -1,0 +1,396 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e5e5e5;
+    color: #111;
+}
+
+
+/* =========================
+   PAGE CONTAINER
+========================= */
+
+.page-container {
+    width: 100%;
+    max-width: 900px;
+    min-height: 100vh;
+
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #f5f5f5;
+
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 16px;
+
+    background-color: #ffffff;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    z-index: 2;
+}
+
+
+/* Temporary NJC logo */
+
+.school-logo {
+    width: 28px;
+    height: 34px;
+
+    margin-right: 8px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: #ff5a5f;
+
+    color: white;
+
+    font-size: 8px;
+    font-weight: bold;
+
+    line-height: 1;
+}
+
+
+.school-logo small {
+    font-size: 5px;
+    margin-top: 2px;
+}
+
+
+.header h1 {
+    font-size: 13px;
+    letter-spacing: 0.4px;
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.main-content {
+    flex: 1;
+
+    padding: 40px 10%;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #ff6b70 0%,
+            #ff898d 55%,
+            #efefef 100%
+        );
+}
+
+
+/* =========================
+   PAGE TITLE
+========================= */
+
+.main-content h2 {
+    text-align: center;
+
+    font-size: 24px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   ACCOUNT DETAILS CARD
+========================= */
+
+.account-card {
+    width: 100%;
+
+    background-color: #f5f5f5;
+
+    border-radius: 10px;
+
+    padding: 10px 14px;
+
+    margin-bottom: 10px;
+}
+
+
+/* Each row */
+
+.setting-row {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    min-height: 25px;
+
+    gap: 10px;
+}
+
+
+.setting-label {
+    font-size: 12px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   UNIQUE ID
+========================= */
+
+.setting-value {
+    font-size: 12px;
+
+    color: #555;
+
+    text-align: right;
+}
+
+
+/* =========================
+   EMAIL
+========================= */
+
+.email-container {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    min-width: 0;
+}
+
+
+.email {
+    font-size: 11px;
+
+    font-family: monospace;
+
+    font-style: italic;
+
+    text-decoration: underline;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    max-width: 180px;
+}
+
+
+.edit-button {
+    border: none;
+
+    background: none;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    color: #555;
+
+    padding: 0;
+}
+
+
+.edit-button:hover {
+    color: #000;
+}
+
+
+/* =========================
+   REPORT BUG
+========================= */
+
+.report-button {
+    width: 100%;
+
+    height: 35px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background-color: #f5f5f5;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    color: #333;
+}
+
+
+.report-button:hover {
+    background-color: #ffffff;
+}
+
+
+/* Bug icon */
+
+.bug-icon {
+    font-size: 13px;
+}
+
+
+/* =========================
+   LOGOUT BUTTON
+========================= */
+
+.logout-button {
+    margin-top: 10px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background-color: #f5f5f5;
+
+    padding: 8px 18px;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    color: #c53d42;
+}
+
+
+.logout-button:hover {
+    background-color: #ffffff;
+}
+
+
+/* =========================
+   BOTTOM NAVIGATION
+========================= */
+
+.bottom-nav {
+    height: 53px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    background-color: #ff555a;
+
+    flex-shrink: 0;
+}
+
+
+.bottom-nav a {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+
+    color: #111;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    transition: background-color 0.2s;
+}
+
+
+.bottom-nav a:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+
+/* Active page */
+
+.bottom-nav a.active {
+    background-color: #d94146;
+
+    color: white;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+
+@media (max-width: 500px) {
+
+    .main-content {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+
+    .main-content h2 {
+        font-size: 20px;
+    }
+
+
+    .setting-label,
+    .setting-value {
+        font-size: 10px;
+    }
+
+
+    .email {
+        font-size: 9px;
+
+        max-width: 150px;
+    }
+
+
+    .report-button,
+    .logout-button {
+        font-size: 10px;
+    }
+
+
+    .bottom-nav a {
+        font-size: 10px;
+    }
+
+}

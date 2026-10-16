@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box; /* Crucial for padding calculations */
+}
+
+body {
+  background-color: #f0f0f0;
+}
+
+.content {
+  flex: 1;
+  padding: 20px 16px 80px 16px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  overflow-y: auto;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.card:active {
+  transform: scale(0.98); /* Native mobile feel when pressed */
+}
+
+.card-image-wrapper {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  flex: 0 0 auto;
+  background-color: #ffffff; 
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-image-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px; /* Controls how tall the shadow gradient is */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0));
+  
+  pointer-events: none; /* Prevents the overlay from blocking click/tap triggers */
+}
+
+.card-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+  object-fit: contain;
+  display: block;
+}
+
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #030303;
+}
+
+/* --- NEW DETAILS VIEW OVERLAY & CAROUSEL --- */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: flex-end; /* Slides up from or docks to the bottom like an app drawer */
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Card occupying most of the screen */
+.details-card {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 500px;
+  height: 85vh; /* Occupies 85% of screen height */
+  border-radius: 24px 24px 0 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.1, 0.76, 0.55, 0.94);
+}
+
+.overlay.active .details-card {
+  transform: translateY(0);
+}
+
+/* image carousel */
+.carousel-container {
+  width: 100%;
+  height: 40%; /* Takes up top portion of the screen card */
+  background-color: #ffffff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#modalImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Shows full photo inside preview frame without clipping */
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+
+.carousel-btn:active {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.prev-btn { left: 16px; }
+.next-btn { right: 16px; }
+
+/* additional info section */
+.details-info {
+  padding: 24px;
+  flex: 1;
+  overflow-y: auto; /* text scrollable if descriptions are long */
+  display: flex;
+  flex-direction: column;
+}
+
+.details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 4px;
+}
+
+#modalTitle {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333333;
+}
+
+.details-price {
+  font-size: 22px;
+  font-weight: bold;
+  color: #d32f2f; /* Red emphasis highlight for rewards price */
+}
+
+.details-stock {
+  font-size: 14px;
+  color: #666666;
+  margin-bottom: 16px;
+}
+
+.divider {
+  border: 0;
+  height: 1px;
+  background-color: #e0e0e0;
+  margin-bottom: 16px;
+}
+
+#modalDescription {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #444444;
+  flex: 1;
+}
+
+.close-btn {
+  margin-top: 20px;
+  margin-bottom: 35px; /* Creates explicit clearance above the bottom navigation footer */
+  padding: 14px;
+  background-color: #424242;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+}
