@@ -1,7 +1,7 @@
 <h1>Set up</h1>
 <ol>
   <li>
-    Install MySQL Workbench to set up the SQL Server
+    Install MySQL Workbench and MySQL Server
     <ul>
       <li>Run the database.sql script in MySQL WorkBench</li>
     </ul>
@@ -17,6 +17,7 @@
     Install required libraries
     <ul>
       <li>'npm install express mysql2 cors body-parser'</li>
+      <li>'npm pkg set script.start="node server.js"'</li>
     </ul>
   </li>
 </ol>
