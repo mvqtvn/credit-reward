@@ -1,5 +1,0 @@
-student_id,email,rfid_uid,credit,house,level
-1,alex.tan@example.com,RFID-SAMPLE-001,140,Sample House A,1
-2,jamie.lim@example.com,RFID-SAMPLE-002,100,Sample House B,2
-3,riley.chen@example.com,RFID-SAMPLE-003,80,Sample House A,3
-4,taylor.ng@example.com,RFID-SAMPLE-004,50,Sample House C,4
