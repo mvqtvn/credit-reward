@@ -1,0 +1,5 @@
+reward_id,reward_name,description,cost,stock,image_urls
+1,Keychains,"Keychain featuring the NJC mascot",150,100,"[""/assets/images/rewards/keychain_preview.png"",""/assets/images/rewards/keychain_details.png""]"
+2,Socks,"NJC house socks",300,100,"[""/assets/images/rewards/socks_preview.png"",""/assets/images/rewards/socks_details.png""]"
+3,Stickers,"NJC waterproof sticker",60,150,"/assets/images/rewards/sticker.png"
+4,Vouchers,"Canteen food vouchers",200,80,"/assets/images/rewards/vouchers.png"

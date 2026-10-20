@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-left">
+            <img src="../../assets/images/njclogo.png" alt="NJC Logo" class="logo">
+        </div>
+    </header>
+
+    <main class="main-content">
+        <h1>Settings</h1>
+
+        <section class="account-card" aria-labelledby="account-heading">
+            <h2 id="account-heading">Account details</h2>
+
+            <div class="setting-row">
+                <span class="setting-label">Your Unique ID</span>
+                <span class="setting-value" id="studentUniqueId">Not available</span>
+            </div>
+
+            <div class="setting-row">
+                <span class="setting-label">Email</span>
+                <span class="setting-value email" id="studentEmail">Not available</span>
+            </div>
+        </section>
+
+        <section class="support-card" aria-label="Support">
+            <div>
+                <h2>Need help?</h2>
+                <p>Let us know if something is not working as expected.</p>
+            </div>
+            <button class="report-button" type="button">
+                <span>Report a Bug</span>
+                <span class="bug-icon" aria-hidden="true">🐞</span>
+            </button>
+        </section>
+
+        <button class="logout-button" type="button">Logout</button>
+    </main>
+
+    <footer class="bottom-banner">
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="../dashboard/index.html" class="nav-btn">Dashboard</a>
+            <a href="../rewards/index.html" class="nav-btn">Rewards</a>
+            <a href="../leaderboard/index.html" class="nav-btn">Leaderboard</a>
+            <a href="../settings/index.html" class="nav-btn" aria-current="page">Settings</a>
+        </nav>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

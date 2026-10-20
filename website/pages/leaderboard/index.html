@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <img src="../../assets/images/njclogo.png" alt="NJC Logo" class="logo">
+        </div>
+    </header>
+
+    <main class="leaderboard-page">
+        <section class="leaderboard-section" aria-labelledby="leaderboard-title">
+            <div class="leaderboard-heading">
+                <h1 id="leaderboard-title">House Leaderboard</h1>
+                <p>House credits earned this term</p>
+            </div>
+            <p id="leaderboardStatus" class="leaderboard-status" role="status" aria-live="polite">
+                Loading house credits...
+            </p>
+            <ol id="houseLeaderboard" class="bar-chart" aria-label="House rankings"></ol>
+        </section>
+
+        <div class="leaderboard-details">
+            <section class="term-card" aria-labelledby="term-heading">
+                <h2 id="term-heading">Term countdown</h2>
+                <p class="term-end-date">Term ends <time id="termEndDate" datetime="2026-10-30T23:59:59+08:00">30 October 2026</time></p>
+                <p id="termCountdown" class="term-countdown" role="timer" aria-live="off"></p>
+            </section>
+
+            <section class="rewards-card" aria-labelledby="rewards-heading">
+                <h2 id="rewards-heading">Term rewards</h2>
+                <p class="reward-description">Awarded to each student in the top three houses:</p>
+                <ol class="reward-list">
+                    <li><span>1st place</span><strong>10 points each</strong></li>
+                    <li><span>2nd place</span><strong>20 points each</strong></li>
+                    <li><span>3rd place</span><strong>30 points each</strong></li>
+                </ol>
+            </section>
+        </div>
+    </main>
+
+    <footer class="bottom-banner">
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="../dashboard/index.html" class="nav-btn">Dashboard</a>
+            <a href="../rewards/index.html" class="nav-btn">Rewards</a>
+            <a href="../leaderboard/index.html" class="nav-btn" aria-current="page">Leaderboard</a>
+            <a href="../settings/index.html" class="nav-btn">Settings</a>
+        </nav>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
