@@ -9,7 +9,7 @@
   <li>
     JavaScript Server
     <ul>
-      <li>Initialise Node.js in the backend folder</li>
+      <li>Initialise Node.js in the backend folder (Install Node.js</li>
       <li>run 'npm init -y' in the terminal of the respective directory (package.json or package-lock.json should appear in the file)</li>
     </ul>
   </li>
